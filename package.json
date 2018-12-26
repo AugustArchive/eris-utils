@@ -1,0 +1,9 @@
+{
+    "name": "@maika.xyz/eris-utils",
+    "description": "Custom Eris utilities for Maika",
+    "version": "0.0.1",
+    "main": "src/index.js",
+    "typings": "index.d.ts",
+    "author": "auguwu",
+    "license": "MIT"
+}
