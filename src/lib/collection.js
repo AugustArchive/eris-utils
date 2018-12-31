@@ -1,9 +1,7 @@
 /**
- * Hold a bunch of things instead of a map.
+ * Hold a bunch of things inside of an Map.
  */
 module.exports = class Collection extends Map {
-    constructor() { super(); }
-
     /**
      * Filters out anything and returns the Array of boolean(s)
      * 
