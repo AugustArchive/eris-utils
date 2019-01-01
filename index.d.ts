@@ -1,4 +1,6 @@
 declare module '@maika.xyz/eris-utils' {
+    import { EmbedOptions } from 'eris';
+
     /** The version of the `eris-utils` component for Maika. */
     export const version: string;
 
@@ -121,7 +123,7 @@ declare module '@maika.xyz/eris-utils' {
     export type EmbedImage = { url: string; };
 
     /** The embed object */
-    export interface EmbedObject {
+    export type EmbedObject = {
         title: string;
         description: string;
         type: string;
@@ -133,5 +135,5 @@ declare module '@maika.xyz/eris-utils' {
         image?: EmbedImage;
         author?: EmbedAuthor;
         footer?: EmbedFooter;
-    }
+    } & EmbedOptions;
 }
