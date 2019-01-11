@@ -184,7 +184,7 @@ function checkEmbedField(name, value, inline = false) {
 
     value = resolveString(value);
     if (!value)
-        throw new TypeError("No valud was defined.");
+        throw new TypeError("No value was defined.");
 
     return { name, value, inline };
 }

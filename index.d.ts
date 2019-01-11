@@ -29,6 +29,35 @@ declare module '@maika.xyz/eris-utils' {
          * @returns The mapped object but in an array
          */
         public map(fn: (i: V) => any): V[];
+
+        /**
+         * Returns a value resulting from applying a function to every element of the collection
+         * @param fn The function
+         * @param val The value
+         * @returns The value
+         */
+        public reduce(fn: (i: V) => any, val?: any): V;
+
+        /**
+         * Returns an array with the elements of the collection sorted
+         * @param fn The function
+         * @returns The value
+         */
+        public sort(fn: (a: V, b: V) => number): V;
+
+        /**
+         * Returns true if all elements satisfy the condition
+         * @param fn The function
+         * @returns If it's true or false
+         */
+        public every(fn: (i: V) => boolean): boolean;
+
+        /**
+         * Returns true if only one element satisfies the condition
+         * @param fn The function
+         * @returns If it's true or false
+         */
+        public some(fn: (i: V) => boolean): boolean;
     }
 
     /** Utility to convert Discord embeds into JSON */
@@ -56,6 +85,7 @@ declare module '@maika.xyz/eris-utils' {
         public setURL(uri: string): this;
         public setFooter(text: string, iconURL?: string): this;
         public setTimestamp(t?: Date | number): this;
+        public setImage(url: string): this;
         public build(): EmbedObject;
     }
 
@@ -100,7 +130,7 @@ declare module '@maika.xyz/eris-utils' {
     export type EmbedField = {
         name: string;
         value: string;
-        inline: boolean;
+        inline?: boolean;
     }[];
 
     /** The embed author type */
