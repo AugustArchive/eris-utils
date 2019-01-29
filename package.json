@@ -1,10 +1,16 @@
 {
     "name": "@maika.xyz/eris-utils",
     "description": "Custom Eris utilities for Maika",
-    "version": "0.1.0",
-    "main": "src/index.js",
+    "version": "0.1.1",
+    "main": "build/index.js",
     "typings": "index.d.ts",
     "author": "auguwu",
     "license": "MIT",
-    "devDependencies": { "eris": "0.9.0" }
+    "devDependencies": {
+        "@types/node": "10.12.18",
+        "typescript": "3.2.4"
+    },
+    "scripts": {
+        "build": "rm -fr build && tsc"
+    }
 }
