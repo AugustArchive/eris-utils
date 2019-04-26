@@ -7,7 +7,7 @@
     "author": "auguwu",
     "license": "MIT",
     "devDependencies": {
-        "@types/node": "10.12.27",
+        "@types/node": "10.14.6",
         "typescript": "3.3.3333"
     },
     "scripts": {
